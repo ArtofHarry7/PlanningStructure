@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Excel File</title>
+</head>
+<body>
+<h1>Upload Excel File</h1>
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <label for="file">Select Excel File:</label>
+    <input type="file" id="file" name="file" required>
+    <br>
+
+    <label for="routeType">Route Type:</label>
+    <select id="routeType" name="routeType" required>
+        <option value="" selected disabled>Select a route type</option>
+        <option value="firstInLastOut">First In Last Out</option>
+        <option value="default">Default</option>
+        <option value="pickThenDrop">Pick Then Drop</option>
+    </select><br>
+
+    <label for="averageSpeed">Average Speed:</label>
+    <input type="number" id="averageSpeed" name="averageSpeed" step="any" value="50" required>
+    <br>
+    <label for="distanceCost">Distance Cost</label>
+    <input type="number" id="distanceCost" name="distanceCost" step="any" value="1.5" required>
+    <br>
+    <label for="waitingTimeCost">Waiting Time Cost</label>
+    <input type="number" id="waitingTimeCost" name="waitingTimeCost" step="any" value="0.25" required>
+    <br>
+    <label for="perStopCharge">Per Stop Charge</label>
+    <input type="number" id="perStopCharge" name="perStopCharge" step="any" value="5" required>
+    <br>
+    <label for="fixedHandlingTime">Fixed Handling Time</label>
+    <input type="number" id="fixedHandlingTime" name="fixedHandlingTime" step="any" value="0.25" required>
+    <br>
+    <label for="variableHandlingRate">Variable Handling Rate</label>
+    <input type="number" id="variableHandlingRate" name="variableHandlingRate" step="any" value="60186.1976" required>
+    <br>
+    <label for="StopLimit">Stop Limit</label>
+    <input type="number" id="StopLimit" name="StopLimit" step="any" value="30" required>
+    <br>
+
+    <br>
+    <label for="enableAggregation">Enable Aggregation:</label>
+    <input type="checkbox" id="enableAggregation" name="enableAggregation" checked>
+    <br>
+    <label for="minTimeOverlap">Minimum Time Overlap</label>
+    <input type="number" id="minTimeOverlap" name="minTimeOverlap" step="any" value="1" required>
+    <br>
+
+    <br>
+    <label for="enablePSO">Enable Particle Swarm Optimization:</label>
+    <input type="checkbox" id="enablePSO" name="enablePSO">
+    <br>
+    <label for="locationMarginFactor">Location Margin Factor</label>
+    <input type="number" id="locationMarginFactor" name="locationMarginFactor" step="any" value="0.5" required>
+    <br>
+    <label for="numParticles">Particles Count</label>
+    <input type="number" id="numParticles" name="numParticles" value="30" required>
+    <br>
+    <label for="maxIterations">Maximum Iterations</label>
+    <input type="number" id="maxIterations" name="maxIterations" value="10" required>
+    <br>
+    <label for="inertiaWeight">Inertia Weight</label>
+    <input type="number" id="inertiaWeight" name="inertiaWeight" step="any" value="0.5" required>
+    <br>
+    <label for="cognitiveWeight">Cognitive Weight</label>
+    <input type="number" id="cognitiveWeight" name="cognitiveWeight" step="any" value="1.5" required>
+    <br>
+    <label for="socialWeight">Social Weight</label>
+    <input type="number" id="socialWeight" name="socialWeight" step="any" value="2" required>
+    <br>
+
+    <br>
+    <button type="submit">Upload</button>
+</form>
+</body>
+</html>
